@@ -12,10 +12,16 @@ const app = express();
 
 //request 이벤트 리스너 설정
 //request와 response을 받았을때 생성하도록함
+// https://expressjs.com/ko/guide/using-middleware.html
+// 미들웨어 사용
+// 요청 오브젝트(req), 응답오브젝트(res)
 app.use((request, response) => {
     //화면에 아래의 html<h1> 태그를 출력해준다
     response.send('<h1>Hello express</h1>')
 })
+
+
+
 
 // 내가적은 (3000 or 52273) 포트로 서버를 오픈,실행함
 // 먼저 포트번호를 지정하고, 포트번호를 통해 외부에서 접근가능하게 한다
